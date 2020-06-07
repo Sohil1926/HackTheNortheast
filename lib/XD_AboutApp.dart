@@ -4,6 +4,8 @@ import 'package:adobe_xd/page_link.dart';
 import './XD_Start.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'XD_SignUp.dart';
+
 class XD_AboutApp extends StatelessWidget {
   XD_AboutApp({
     Key key,
@@ -61,7 +63,7 @@ class XD_AboutApp extends StatelessWidget {
                   transition: LinkTransition.Fade,
                   duration: 0.3,
                   ease: Curves.easeOut,
-                  pageBuilder: () => XD_Start(),
+                  pageBuilder: () => XD_SignUp(),
                 ),
               ],
               child: Container(

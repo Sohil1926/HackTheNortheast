@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'dart:ui' as ui;
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:adobe_xd/page_link.dart';
 import './XD_SignUp.dart';
+import 'XD_SignUp.dart';
+import 'XD_SignUp.dart';
+import 'XD_SignUp.dart';
 
 class XD_Start extends StatelessWidget {
   XD_Start({
@@ -10,8 +14,22 @@ class XD_Start extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    return MaterialApp(
+      home: StartScaffold(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class StartScaffold extends StatelessWidget {
+  const StartScaffold({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffffffff),
+      backgroundColor: const Color(0xffb6f2d0),
       body: Stack(
         children: <Widget>[
           // Adobe XD layer: 'Start Journey' (group)

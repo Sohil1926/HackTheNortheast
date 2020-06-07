@@ -11,7 +11,7 @@ class XD_Name extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffffffff),
+      backgroundColor: const Color(0xffb6f2d0),
       body: Stack(
         children: <Widget>[
           // Adobe XD layer: 'X - 1' (group)

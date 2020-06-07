@@ -3,6 +3,8 @@ import 'dart:ui' as ui;
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:adobe_xd/page_link.dart';
 import './XD_Great.dart';
+import 'XD_Great.dart';
+import 'XD_Great.dart';
 
 class XD_SignUp extends StatelessWidget {
   XD_SignUp({
@@ -10,8 +12,22 @@ class XD_SignUp extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    return MaterialApp(
+      home: SignupScaffold(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class SignupScaffold extends StatelessWidget {
+  const SignupScaffold({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffffffff),
+      backgroundColor: const Color(0xffb6f2d0),
       body: Stack(
         children: <Widget>[
           // Adobe XD layer: 'Sign up (1)' (group)
@@ -106,6 +122,27 @@ class XD_SignUp extends StatelessWidget {
                   ),
                 ],
               ),
+              Container(
+                  margin: EdgeInsets.only(top: 210, left: 80),
+                  child: Text("Name",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: new Color(0xffD6D6D6),
+                      ))),
+              Container(
+                  margin: EdgeInsets.only(top: 346, left: 80),
+                  child: Text("Password",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: new Color(0xffD6D6D6),
+                      ))),
+              Container(
+                  margin: EdgeInsets.only(top: 417, left: 80),
+                  child: Text("Confirm your Password",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: new Color(0xffD6D6D6),
+                      ))),
               PageLink(
                 links: [
                   PageLinkInfo(
@@ -122,6 +159,24 @@ class XD_SignUp extends StatelessWidget {
                       child: Container(
                         width: 259.0,
                         height: 66.0,
+                        child: Container(
+                          height: 160,
+                          margin: EdgeInsets.only(top: 0, left: 0),
+                          child: Center(
+                            child: new GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => XD_Great()));
+                              },
+                              child: new Text(
+                                "Continue",
+                                style: TextStyle(fontSize: 38),
+                              ),
+                            ),
+                          ),
+                        ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(33.0),
                           color: const Color(0xffffffff),
@@ -133,6 +188,21 @@ class XD_SignUp extends StatelessWidget {
               ),
             ],
           ),
+          Container(
+              margin: EdgeInsets.only(top: 560, left: 58),
+              height: 70,
+              width: 250,
+              child: new FlatButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => XD_Great()),
+                  );
+                },
+                child: Text(""),
+                splashColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+              ))
         ],
       ),
     );
