@@ -1,3 +1,4 @@
+import 'package:arcademy/XD_Interest3.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 import 'package:adobe_xd/page_link.dart';
@@ -223,6 +224,21 @@ class XD_Changingbehavior2 extends StatelessWidget {
               ],
             ),
           ),
+          new Container(
+              width: 250,
+              height: 70,
+              margin: EdgeInsets.only(top: 605, left: 60),
+              child: FlatButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => XD_Interest3()),
+                  );
+                },
+                child: Text(""),
+                splashColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+              ))
         ],
       ),
     );

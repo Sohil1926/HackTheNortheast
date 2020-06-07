@@ -1,3 +1,5 @@
+import 'package:arcademy/XD_Challenges.dart';
+import 'package:arcademy/XD_Quiz.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 import 'package:adobe_xd/page_link.dart';
@@ -211,6 +213,21 @@ class XD_Changingbehavior4 extends StatelessWidget {
               ],
             ),
           ),
+          new Container(
+              width: 250,
+              height: 70,
+              margin: EdgeInsets.only(top: 605, left: 60),
+              child: FlatButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => XD_Quiz()),
+                  );
+                },
+                child: Text(""),
+                splashColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+              ))
         ],
       ),
     );
